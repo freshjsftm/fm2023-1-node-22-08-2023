@@ -5,8 +5,9 @@ const fs = require('fs/promises');
 fs.readFile('./text.txt', 'utf-8')
   .then((content) => {
     console.log(content);
+    content += '\n';
     //створити файл і записати в нього content
-    fs.writeFile('./new1.txt', content).then(() => {
+    fs.appendFile('./new2.txt', content, 'utf-8').then(() => {
       console.log('file create');
     });
   })
