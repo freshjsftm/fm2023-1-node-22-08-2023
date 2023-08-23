@@ -1,19 +1,5 @@
 'use strict';
-const fs = require('fs/promises');
-// const fs = require('fs').promises;
-// console.log(fs);
-fs.readFile('./text.txt', 'utf-8')
-  .then((content) => {
-    console.log(content);
-    content += '\n';
-    //створити файл і записати в нього content
-    fs.appendFile('./new2.txt', content, 'utf-8').then(() => {
-      console.log('file create');
-    });
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+
 
 /*
 require
