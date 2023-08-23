@@ -1,14 +1,18 @@
 'use strict';
-const { Component } = require('./Component');
-const { MyMath } = require('./MyMath');
-const data = require('./test');
-console.log('hi, node!', data);
-
-const result = MyMath.mult(2, 4);
-console.log('result = ', result);
-
-const component = new Component();
-component.render();
+const fs = require('fs/promises');
+// const fs = require('fs').promises;
+// console.log(fs);
+fs.readFile('./text.txt', 'utf-8')
+  .then((content) => {
+    console.log(content);
+    //створити файл і записати в нього content
+    fs.writeFile('./new1.txt', content).then(() => {
+      console.log('file create');
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 /*
 require
