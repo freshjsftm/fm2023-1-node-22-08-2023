@@ -4,4 +4,5 @@ class MyMath {
   static div = (a, b) => a / b;
   static mult = (a, b) => a * b;
 }
+console.log('MyMath!!!!!!!!!!');
 exports.MyMath = MyMath;
