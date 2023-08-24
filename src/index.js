@@ -5,10 +5,13 @@
 const _ = require('lodash');
 
 //require own module
-const Component = require('./Component');
+//const {Component} = require('./Component'); //CommonJS
+import Component from './Component'; //ESModules
 require('./style.css');
 
-console.log(_.random(1, 10));
+console.dir(Component);
+
+console.log(_.random(10, 100));
 
 console.log('hi!');
 const resultSummaTwoNumbers = 5 + 2;

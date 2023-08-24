@@ -1,10 +1,12 @@
 const path = require('path');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const pathToDist = path.resolve(__dirname, 'dist');
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: '[contenthash].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: pathToDist,
+    clean: true,
   },
   mode: 'development',
   module: {
@@ -14,5 +16,17 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
     ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+      template: './src/index.html',
+    }),
+  ],
+  devServer: {
+    static: pathToDist,
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
 };
