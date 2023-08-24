@@ -1,6 +1,13 @@
 'use strict';
-const _ = require('lodash');
-console.log(_.random(1, 10));
+// const _ = require('lodash');
+// console.log(_.random(1, 10));
+
+console.log('hi!');
+const resultSummaTwoNumbers = 5 + 2;
+console.log(resultSummaTwoNumbers);
+
+
+
 
 /*
 require
