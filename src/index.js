@@ -1,13 +1,21 @@
 'use strict';
-// const _ = require('lodash');
-// console.log(_.random(1, 10));
+//require core module
+
+//require node module
+const _ = require('lodash');
+
+//require own module
+const Component = require('./Component');
+require('./style.css');
+
+console.log(_.random(1, 10));
 
 console.log('hi!');
 const resultSummaTwoNumbers = 5 + 2;
 console.log(resultSummaTwoNumbers);
 
-
-
+const component = new Component();
+component.render();
 
 /*
 require
