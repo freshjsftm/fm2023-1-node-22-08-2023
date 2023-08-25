@@ -1,24 +1,21 @@
 'use strict';
-//require core module
-
-//require node module
-const _ = require('lodash');
-
-//require own module
-//const {Component} = require('./Component'); //CommonJS
-import Component from './Component'; //ESModules
+//const _ = require('lodash');
+import _ from 'lodash';
+import math from './math';
+import Component from './Component';
 require('./style.css');
-
-console.dir(Component);
+const {sum, sub} = math;
 
 console.log(_.random(10, 100));
-
-console.log('hi!');
-const resultSummaTwoNumbers = 5 + 2;
-console.log(resultSummaTwoNumbers);
+console.log(math);
 
 const component = new Component();
 component.render();
+
+const result = sub(8,3);
+
+const root = document.getElementById('root');
+root.innerText = 'Text in root, result = ' + result;
 
 /*
 require
